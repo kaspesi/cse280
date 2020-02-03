@@ -28,6 +28,11 @@ watershead spear
 
 ### Tyler Dressman
 
+Top 3 projects:
+- AI for social good
+- Learning AI with the Unity Game Engine
+- Klonamo
+
 ### Emir Anda
 https://github.com/kaspesi/cse280/commit/7096d19db39493890f62cb0ed7c01bb3bae2e60e
 Top 3 Projects:
@@ -38,7 +43,7 @@ Top 3 Projects:
 ### Hayden Trautmann
 
 ### Kevin Aspesi
-Created repo and added summary as well ass my top 3 choices for projects [proof](https://github.com/kaspesi/cse280/commit/267493c9aed266e9a8df869a89fef86100969009)
+Created repo and added summary as well as my top 3 choices for projects [proof](https://github.com/kaspesi/cse280/commit/267493c9aed266e9a8df869a89fef86100969009)
 - Smart Traffic, not satisfied they made it all the way through it to control the traffic ligth
 - AI for social good
 - AI with the Unitiy Game Engine

@@ -33,3 +33,7 @@ watershead spear
 ### Hayden Trautmann
 
 ### Kevin Aspesi
+Created repo and added summary as well ass my top 3 choices for projects [proof](https://github.com/kaspesi/cse280/commit/267493c9aed266e9a8df869a89fef86100969009)
+- Smart Traffic, not satisfied they made it all the way through it to control the traffic ligth
+- AI for social good
+- AI with the Unitiy Game Engine

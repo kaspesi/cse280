@@ -20,8 +20,11 @@ Our goals are to: decide upon a project and outline the first intitial steps.
 ## Individual Member Contributions
 
 ### Shane Acoveno
-- Began outline of progress report https://github.com/shaneacoveno?tab=overview&from=2020-01-01&to=2020-01-31 
-Estimated time: 10min
+https://github.com/shaneacoveno?tab=overview&from=2020-01-01&to=2020-01-31 
+Top 3 in no order:
+ai for social good
+munoz ai
+watershead spear
 
 ### Tyler Dressman
 

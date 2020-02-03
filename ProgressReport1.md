@@ -29,6 +29,10 @@ watershead spear
 ### Tyler Dressman
 
 ### Emir Anda
+Top 3 Projects:
+- AI for Social Good
+- Learning AI with the Unity Game Engine
+- VR of the Lehigh Watershed 
 
 ### Hayden Trautmann
 

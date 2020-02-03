@@ -41,6 +41,11 @@ Top 3 Projects:
 - VR of the Lehigh Watershed 
 
 ### Hayden Trautmann
+Top 3:
+- AI for Social Good
+- AI Traffic Light
+- Learning AI with the Unity Game Engine
+
 
 ### Kevin Aspesi
 Created repo and added summary as well as my top 3 choices for projects [proof](https://github.com/kaspesi/cse280/commit/267493c9aed266e9a8df869a89fef86100969009)

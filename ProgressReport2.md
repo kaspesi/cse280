@@ -16,7 +16,9 @@ Our goals are to: decide upon a project and outline the first intitial steps.
 ## Individual Member Contributions
 
 ### Shane Acoveno
-
+- Sent email to Professor Lopresti in regards to his AI for Social Good project
+- Helped write project proposal
+- Met with Professor Phillips to discuss further steps of action
 
 ### Tyler Dressman
 

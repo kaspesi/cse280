@@ -36,4 +36,5 @@ Our goals are to: decide upon a project and outline the first intitial steps.
 - Helped write email to Professor Lopresi
 - Helped write project proposal
 - Looked into company Aequita whcih we will potentially be working with and then started looking into human machine interaction
+- **Topic**:  Danger of AI in China?
   

@@ -29,7 +29,10 @@ https://github.com/kaspesi/cse280/commit/6892afb941499d940e0c26d47e90781219a015c
 
 
 ### Hayden Trautmann
-
+- Researched AEquitas, the non-profit we will potentially be working with
+- Gathered information on their CEO, who would be one of our mentors
+- Looked into how AI is used to fight human trafficking, to get an idea of what we might be doing
+- Presentation: Quantum Computing
 
 
 ### Kevin Aspesi

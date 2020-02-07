@@ -21,7 +21,8 @@ Meet with Professor Lopresti
 
 ### Tyler Dressman
 - Updated goals
-Presentation Topic: Ethereum
+https://github.com/kaspesi/cse280/commit/6892afb941499d940e0c26d47e90781219a015ca
+- Presentation Topic: Ethereum
 
 
 ### Emir Anda

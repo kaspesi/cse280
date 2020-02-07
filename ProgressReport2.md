@@ -1,17 +1,16 @@
-# Progress Report 1
+# Progress Report 2
 ## Summary of Work Completed
 Since our last meeting we finalized that we wanted our project to be AI for social good with Professor Lopresi.  This week we created our project proposal and emailed our potential project advisor.  In this email we listed our cummulative group experiance with the required skills for the project and are waiting back for his response. 
 
 ### Goals completed this week
-Formulation of top 3 project choices.
+Project decided on.
 
 ### Goals not met this week 
-Last week did not have any goals
 
 ### Challenges faced this week
 
 ### Goals for next week
-Our goals are to: decide upon a project and outline the first intitial steps.
+Meet with Professor Lopresti
 
 ## Individual Member Contributions
 
@@ -21,6 +20,8 @@ Our goals are to: decide upon a project and outline the first intitial steps.
 - Met with Professor Phillips to discuss further steps of action
 
 ### Tyler Dressman
+- Updated goals
+Presentation Topic: Ethereum
 
 
 ### Emir Anda

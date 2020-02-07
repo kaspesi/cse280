@@ -1,4 +1,4 @@
-# Progress Report 1
+# Progress Report 2
 ## Summary of Work Completed
 We decided on AI for Social Good as our project. We reached out to Professor Lopresti to meet with him.
 
@@ -17,7 +17,7 @@ Our goals are to: meet with Professor Lopresti to start the project
 ### Shane Acoveno
 
 ### Tyler Dressman
-
+https://github.com/kaspesi/cse280/commit/628e553aa77dfc242957a23aced0dca768ad4ff4
 Short Presentation Topic: Ethereum
 
 ### Emir Anda

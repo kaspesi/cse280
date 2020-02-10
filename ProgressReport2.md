@@ -26,7 +26,9 @@ https://github.com/kaspesi/cse280/commit/6892afb941499d940e0c26d47e90781219a015c
 
 
 ### Emir Anda
-
+- Met with Professor Phillips and decided on a project
+- Helped with writing project proposal and emailing Professor Lopresti
+- Did Research for individual presentation on Tuesday
 
 ### Hayden Trautmann
 - Researched AEquitas, the non-profit we will potentially be working with

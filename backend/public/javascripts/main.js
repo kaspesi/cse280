@@ -28,7 +28,7 @@ window.onload = function () {
                 return response.json()
                 .then(data => {
                     console.log(data)
-                    document.getElementById("in_game_username").value = data['Username']
+                    document.getElementById("in_game_username").innerHTML = data['Username']
                     document.getElementById("win_score").value = data['Win']
                     document.getElementById("lose_score").value = data['lose']
                     document.getElementById("tie_score").value = data['Tie']

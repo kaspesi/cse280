@@ -72,18 +72,18 @@ router.post('/SignIn', function (req, res) {
   User.findOne({ Username: req.body.Username }, function (err, user) {
     if (user !== null) {
       user.comparePassword(req.body.password, function (err, isMatch) {
-        if (err) res.status(444).json({ success: false, msg: 'wrong password' });
+        if (err) res.status(444).json({ success: false, msg: 'Error:  Incorrect Password' });
         else if (isMatch) {
           req.session.Auth = req.body.Username
           res.send(user);
         }
         else {
-          res.status(444).json({ success: false, msg: 'wrong password' });
+          res.status(444).json({ success: false, msg: 'Error:  Incorrect Password' });
         }
       });
     }
     else
-      res.status(444).json({ success: false, msg: 'user does not exist' });
+      res.status(444).json({ success: false, msg: 'Uerror: User does not exist' });
   });
 });
 

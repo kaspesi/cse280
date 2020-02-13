@@ -1,36 +1,44 @@
 extends layout
 
 block content
-  <div class = 'game_info' id = "table_4">
-
-    <h4>player name:<input class="un" type="text" align="left" id ="in_game_username" value="username">
-    <h5>win--lose--tie:<input class="un_2" type="text" align="center" id ="win_score" value="0">
-    <input class="un_2" type="text" align="center" id ="lose_score" value="0">
-    <input class="un_2" type="text" align="center" id ="tie_score" value="0">
-    <button class = "log_out" id = "log_out">log out</button>
+  <div class = 'game_info' id = "table_4" style = "padding-left:20%; padding-right:20%">
+    <div class = 'welcome' style = "display:block-inline"> 
+      <h4 style = "float:left; padding-right: 20px;">Welcome to Countr: </h4> 
+      <h4  type="text" id ="in_game_username"> </h4>
+    </div>
+    
+    
+    <button class = "log_out" id = "log_out">Log Out</button>
     
   </div>
 
   <div class="play_page" id = "table_3">
 
-    <p class="sign" align="center" >DECK</p>
-    <button class="button" id = "win_btn">win</button>
-    <button class="button_2" id = "lose_btn">lose</button>
-    <button class="button_3" id = "tie_btn">tie</button>
+    <p class="sign" align="center" >Counters</p>
+    <button class="button" id = "win_btn">Add Counter</button>
+
 
   </div>
 
    <div class="main" id = "table_2">
 
-    <h2 class="sing" align="center" >Welcome to Countr</h2>
-    <p class="sign" align="center" >Sign up</p>
+    <h2 class="sign" align="center" >Sign Up For Countr!</h2>
+    <p class="sign_in" align="center" >Sign up</p>
+    
     <form class="form1" onSubmit="return false;">
-    <p class="small_l" align="center" >enter username</p>
-    <input class="un " type="text" align="center" id = "sg_up_us" value="Username">
-    <p class="small_l" align="center" id = "text_0">enter password</p>
-    <input class="un " type="password" align="center" id = "sg_up_ps" value="Password">
-    <p class="small_l" align="center" >please enter you passwork again to ensure correctness</p>
-    <input class="un " type="password" align="center" id ="sg_up_ps_2" value="pass">
+
+    <p class="small_l" align="center" >Choose Username:</p>
+    <input class="un " type="text" align="center" id = "sg_up_us" placeholder="Username">
+
+    <p class="small_l" align="center" id = "text_0">Enter Password:</p>
+    <input class="un " type="password" align="center" id = "sg_up_ps" placeholder="Password">
+
+    <p class="small_l" align="center" >Confirm Password:</p>
+    <input class="un " type="password" align="center" id ="sg_up_ps_2" placeholder="Confirm Password">
+    
+    <p class="small_l" align="center" >Enter Counter Amount:</p>
+    <input class="un " type="text" align="center" id = "sg_up_us" placeholder="Enter Counter Value">
+    
     <a class="submit" align="center" id = "submit_sg_up">submit</a>  
 
   </div>

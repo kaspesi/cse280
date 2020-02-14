@@ -7,9 +7,7 @@ const SALT_WORK_FACTOR = 10;
 const userSchema = new mongoose.Schema({
     Username: String,
     password: String, 
-    Win: Number,
-    lose: Number,
-    Tie: Number
+    countArray:[Number]
  });
 
  userSchema.pre('save', function(next) {

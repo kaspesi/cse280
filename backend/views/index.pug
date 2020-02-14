@@ -12,10 +12,17 @@ block content
     
   </div>
 
-  <div class="play_page" id = "table_3">
+  <div class="counter_div" id = "table_3">
 
-    <p class="sign" align="center" >Counters</p>
-    <button class="button" id = "win_btn">Add Counter</button>
+    <div class = "sign"> 
+      <p class="counter_header" align="center" >Counters</p>
+      <button class="add_counter_button" id = "win_btn">Add Counter</button>
+    </div>
+
+    <table class = "counter_table" id = "counter_table">
+
+    </table>
+
 
 
   </div>
@@ -37,7 +44,7 @@ block content
     <input class="un " type="password" align="center" id ="sg_up_ps_2" placeholder="Confirm Password">
     
     <p class="small_l" align="center" >Enter Counter Amount:</p>
-    <input class="un " type="text" align="center" id = "sg_up_us" placeholder="Enter Counter Value">
+    <input class="un " type="number" align="center" id = "sg_up_counter" placeholder="Enter Counter Value">
     
     <a class="submit" align="center" id = "submit_sg_up">submit</a>  
 

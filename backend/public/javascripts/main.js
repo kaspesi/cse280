@@ -29,9 +29,21 @@ window.onload = function () {
                 .then(data => {
                     console.log(data)
                     document.getElementById("in_game_username").innerHTML = data['Username']
-                    document.getElementById("win_score").value = data['Win']
-                    document.getElementById("lose_score").value = data['lose']
-                    document.getElementById("tie_score").value = data['Tie']
+                    let counters = data['countArray']
+                    console.log(`in get_user with counters of type ${typeof(counters)} with value ${counters}`)
+                    
+                    let counter_table = document.getElementById("counter_table");
+                    counters.forEach( count => {
+                        let table_row = document.createElement("tr");
+                        counter_table.appendChild(table_row);
+
+                        let count_col = document.createElement("td");
+                        count_col.innerHTML = count;
+                        count_col.className = "count_cell";
+                        table_row.appendChild(count_col);
+                        
+
+                    })
 
                   })
             })
@@ -107,11 +119,18 @@ window.onload = function () {
               })
     }
 
-    function signUp(userName, password) {
+    function signUp(userName, password, initCounter) {
+        console.log(`Passed ${initCounter} to signUp`)
+        let counterArray = []
+        console.log(`Type of initCounter: ${typeof(initCounter)}`)
+        counterArray.push(Number(initCounter))
         let payload = {
             Username: userName,
-            password: password
+            password: password,
+            countArray: counterArray
         };
+
+        console.log(payload)
 
         //console.log(payload)
         return fetch('/SignUp', {
@@ -190,10 +209,10 @@ window.onload = function () {
         .addEventListener("click", function (e) {
             pass_1 = document.getElementById("sg_up_ps").value
             pass_2 = document.getElementById("sg_up_ps_2").value
-            if (pass_1 == pass_2 && pass_1 != "" && pass_2 != "") {
-               // console.log(username_in.value)
-                //console.log(pass_1)
-                signUp(username_in.value, pass_1)
+            counter = document.getElementById("sg_up_counter").value
+            if (pass_1 == pass_2 && pass_1 != "" && pass_2 != "" && counter !="") {
+                console.log(`Counter Value: ${counter}`)
+                signUp(username_in.value, pass_1, counter)
                     .then(function (res) {
                         console.log(res)
                 
@@ -231,6 +250,7 @@ window.onload = function () {
                         table_4.style.display = "block"
                         //display name
                         document.getElementById("in_game_username").value = username.value
+                        console.log(username.countArray);
 
                     }
                 })

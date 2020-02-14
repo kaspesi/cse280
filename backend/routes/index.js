@@ -54,9 +54,7 @@ router.post('/SignUp', function (req, res) {
       var user = new User();
       user.set({ Username: req.body.Username });
       user.set({ password: req.body.password });
-      user.set({ Win: 0 });
-      user.set({ lose: 0 });
-      user.set({ Tie: 0 });
+      user.set({countArray: req.body.countArray});
       user.save();
       req.session.Auth = req.body.Username
       res.send(user)

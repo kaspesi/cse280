@@ -31,46 +31,55 @@ window.onload = function () {
                     document.getElementById("in_game_username").innerHTML = data['Username']
                     let counters = data['countArray']
                     console.log(`in get_user with counters of type ${typeof(counters)} with value ${counters}`)
-                    
-                    let counter_table = document.getElementById("counter_table");
-                    counters.forEach( count => {
-                        let table_row = document.createElement("tr");
-                        counter_table.appendChild(table_row);
+                    populate_count_table(counters)
 
-                                                //COUNT VALUE
-                        let count_col = document.createElement("td");
-                        count_col.innerHTML = count;
-                        count_col.className = "count_cell";
-                        table_row.appendChild(count_col);
-
-                        //DEC BUTTON
-                        let dec_col = document.createElement("td");
-                        let dec_button = document.createElement("button");
-                        dec_button.innerHTML = "-";
-                        dec_col.className = "count_cell";
-                        dec_col.appendChild(dec_button);
-                        table_row.appendChild(dec_col);
-
-                        //INC BUTTON
-                        let inc_col = document.createElement("td");
-                        let inc_button = document.createElement("button");
-                        inc_button.innerHTML = "+";
-                        inc_col.className = "count_cell";
-                        inc_col.appendChild(inc_button);
-                        table_row.appendChild(inc_col);
-
-
-
-                        
-
-
-                        
-
-                    })
 
                   })
             })
           
+    }
+
+
+    function populate_count_table(counters){
+        let counter_table = document.getElementById("counter_table");
+        counters.forEach( count => {
+            let table_row = document.createElement("tr");
+            counter_table.appendChild(table_row);
+
+            //COUNT VALUE
+            let count_col = document.createElement("td");
+            count_col.innerHTML = count;
+            count_col.className = "count_cell";
+            table_row.appendChild(count_col);
+
+
+
+            //INCREMENT BUTTON
+            let inc_col = document.createElement("td");
+            let inc_button = document.createElement("button");
+            inc_button.innerHTML = "+";
+            inc_col.className = "count_cell";
+            inc_col.appendChild(inc_button);
+            table_row.appendChild(inc_col);
+
+
+            //DECREMENT BUTTON
+            let dec_col = document.createElement("td");
+            let dec_button = document.createElement("button");
+            dec_button.innerHTML = "-";
+            dec_col.className = "count_cell";
+            dec_col.appendChild(dec_button);
+            table_row.appendChild(dec_col);
+
+            //DELETE BUTTON
+            let del_col = document.createElement("td");
+            let del_button = document.createElement("button");
+            del_button.innerHTML = "Delete";
+            del_col.className = "count_cell";
+            del_col.appendChild(del_button);
+            table_row.appendChild(del_col);
+
+        })
     }
 
     get_session()

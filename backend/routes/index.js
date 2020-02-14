@@ -109,6 +109,30 @@ router.put('/win', function (req, res) {
   else res.status(444).json({ success: false, msg: 'something wrong' });
 });
 
+
+//win button 
+router.put('/inc', function (req, res) {
+  console.log(req.session)
+  if (req.session.Auth) {
+    console.log(req.session.Auth)
+    User.findOne({ Username: req.session.Auth }, function (err, user) {
+      
+      if (user == null) {
+        res.status(444).json({ success: false, msg: 'null' });
+      }
+   
+      else {
+        let Win_update = user.Win+1;
+        user.set({ Win: Win_update });
+        user.save();
+        res.send(user);
+       
+      }
+    });
+  }
+  else res.status(444).json({ success: false, msg: 'something wrong' });
+});
+
 //lose button 
 router.put('/lose', function (req, res) {
   if (req.session.Auth) {

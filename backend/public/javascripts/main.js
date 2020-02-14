@@ -37,10 +37,33 @@ window.onload = function () {
                         let table_row = document.createElement("tr");
                         counter_table.appendChild(table_row);
 
+                                                //COUNT VALUE
                         let count_col = document.createElement("td");
                         count_col.innerHTML = count;
                         count_col.className = "count_cell";
                         table_row.appendChild(count_col);
+
+                        //DEC BUTTON
+                        let dec_col = document.createElement("td");
+                        let dec_button = document.createElement("button");
+                        dec_button.innerHTML = "-";
+                        dec_col.className = "count_cell";
+                        dec_col.appendChild(dec_button);
+                        table_row.appendChild(dec_col);
+
+                        //INC BUTTON
+                        let inc_col = document.createElement("td");
+                        let inc_button = document.createElement("button");
+                        inc_button.innerHTML = "+";
+                        inc_col.className = "count_cell";
+                        inc_col.appendChild(inc_button);
+                        table_row.appendChild(inc_col);
+
+
+
+                        
+
+
                         
 
                     })

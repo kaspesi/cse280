@@ -363,7 +363,8 @@ window.onload = function () {
                         log_out.style.display = "block"
                         table_4.style.display = "block"
                         //display name
-                        document.getElementById("in_game_username").value = username.value
+                        document.getElementById("in_game_username").innerHTML = username.value
+                        console.log(username.value);
                         console.log(username.countArray);
 
                     }
@@ -381,29 +382,5 @@ window.onload = function () {
         })
             
         })
-        //win
-
-
-
-
-
-
-//lose
-    document.getElementById("lose_btn")
-        .addEventListener("click", function (e) {
-            console.log("add_lose");
-            username = document.getElementById("sg_in_us")
-            add_lose(username.value)
-        })
-//tie
-    document.getElementById("tie_btn")
-        .addEventListener("click", function (e) {
-            console.log("add_tie");
-            username = document.getElementById("sg_in_us")
-            add_tie(username.value)
-        })
-
-        
-
 
 };

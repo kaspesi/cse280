@@ -104,6 +104,19 @@ window.onload = function () {
                 delete_counter(index);
             })
 
+            //SHARE BUTTON
+            let share_col = document.createElement("td");
+            let share_button = document.createElement("button");
+            share_button.innerHTML = "Share";
+            share_col.className = "count_cell_share";
+            share_col.appendChild(share_button);
+            table_row.appendChild(share_col);
+            share_button.addEventListener("click", function(e){
+                console.log(this.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.getAttribute("index"));
+                let index = this.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.getAttribute("index")
+                //delete_counter(index);
+            })
+
         }
     }
 

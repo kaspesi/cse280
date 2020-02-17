@@ -42,17 +42,25 @@ window.onload = function () {
 
     function populate_count_table(counters){
         let counter_table = document.getElementById("counter_table");
-        counters.forEach( count => {
+
+        for(let i = 0; i < counters.length; i++){
+            let count = counters[i];
+
             let table_row = document.createElement("tr");
             counter_table.appendChild(table_row);
 
             //COUNT VALUE
+
+            let index_col = document.createElement("td");
+            index_col.innerHTML = `Counter ${i}:`;
+            index_col.className = "count_cell";
+            index_col.setAttribute("index", i);
+            table_row.appendChild(index_col);
+
             let count_col = document.createElement("td");
             count_col.innerHTML = count;
             count_col.className = "count_cell";
             table_row.appendChild(count_col);
-
-
 
             //INCREMENT BUTTON
             let inc_col = document.createElement("td");
@@ -79,7 +87,7 @@ window.onload = function () {
             del_col.appendChild(del_button);
             table_row.appendChild(del_col);
 
-        })
+        }
     }
 
     get_session()

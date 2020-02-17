@@ -75,7 +75,7 @@ window.onload = function () {
                 let index = this.parentNode.previousSibling.previousSibling.getAttribute("index");
                 console.log(`Inc: ${index} Value: ${value}`);
                 console.log(this);
-                inc_counter(index, value);
+                inc_counter(index);
             })
 
 
@@ -86,6 +86,15 @@ window.onload = function () {
             dec_col.className = "count_cell_dec";
             dec_col.appendChild(dec_button);
             table_row.appendChild(dec_col);
+
+            // dec_button.addEventListener("click", function (e) {
+            //     console.log(this.parentNode.previousSibling.previousSibling.previousSibling.getAttribute("index"));
+            //     let value = this.parentNode.previousSibling.previousSibling.innerHTML;
+            //     let index = this.parentNode.previousSibling.previousSibling.getAttribute("index");
+            //     console.log(`Inc: ${index} Value: ${value}`);
+            //     console.log(this);
+            //     inc_counter(index);
+            // })
 
             //DELETE BUTTON
             let del_col = document.createElement("td");
@@ -118,7 +127,7 @@ window.onload = function () {
         })
     }
 
-    function inc_counter(index, value) {
+    function inc_counter(index) {
         return fetch('/Counters', {
             headers: { 'Content-Type': 'application/json' },
             method: 'get',
@@ -127,7 +136,22 @@ window.onload = function () {
         .then(function(response)  {
             return response.json();
         }).then(function(response){
-                console.log(response.body)
+                count_array = response.body;
+                console.log(count_array)
+                count_array[index] = count_array[index] + 1;
+                console.log(count_array)
+
+                return fetch('Counters', {
+                    headers: { 'Content-Type': 'application/json' },
+                    method: 'put',
+                    body: JSON.stringify(count_array)
+                }).then(function(response) {
+                    return response.json();
+                }).then(function(response){
+                    console.log("In counter add response");
+                    console.log(response.countArray);
+                    populate_count_table(response.countArray);
+                })
         })
 
     }

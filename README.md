@@ -20,4 +20,4 @@
   * Also had issues since with pug we used css body hidden/block rather than different html pages.  So while we had all the routes needed by the backend we only used one html page which was dynamically updated with javascript.
   
 * What would you do differently for the rest of your capstone work?
-  * Working as a group
+  * Planning ahead

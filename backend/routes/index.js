@@ -16,6 +16,84 @@ router.post('/LogOff', function (req, res) {
   });
 });
 
+router.get('/Counters', function (req, res, next) {
+  if (req.session.Auth) {
+    User.findOne({ Username: req.session.Auth }, function (err, user) {
+      if (user !== null){
+        let countArray = user.countArray;
+        // console.log(countArray);
+        // console.log(req.query);
+        res.json({body: countArray});
+      }
+      else
+        res.status(444).json({ success: false, msg: 'Couldnt get counter' }); 
+    });
+  }
+  else 
+    res.status(444).json({ success: false, msg: 'no access' });
+  });
+
+
+  router.put('/Counters', function (req, res) {
+    console.log(req.session)
+    if (req.session.Auth) {
+      console.log(req.session.Auth)
+      User.findOne({ Username: req.session.Auth }, function (err, user) {
+        
+        if (user == null) {
+          res.status(444).json({ success: false, msg: 'null' });
+        }
+     
+        else {
+          // console.log("In router");
+          // console.log(req.body);
+          User.countArray = req.body;
+          let count_array_update = req.body;
+          user.set({ countArray: count_array_update });
+          user.save();
+          res.send(user);
+         
+        }
+      });
+    }
+    else res.status(444).json({ success: false, msg: 'something wrong' });
+  });
+
+  router.delete('/Counters', function (req, res) {
+    console.log(req.session)
+    if (req.session.Auth) {
+      console.log(req.session.Auth)
+      User.findOne({ Username: req.session.Auth }, function (err, user) {
+        
+        if (user == null) {
+          console.log("Delete error");
+          res.status(444).json({ success: false, msg: 'null' });
+        }
+     
+        else {
+          // console.log("In router");
+          // console.log(req.body);
+          let count_array_update = user.countArray;
+          let index = req.body.i;
+          console.log(`Index: ${index}`)
+          count_array_update.splice(index, 1)
+          console.log(count_array_update);
+          user.set({ countArray: count_array_update });
+          user.save();
+          res.send(user);
+
+          // res.send(user);
+         
+        }
+      });
+    }
+    else {
+      console.log("Delete error");
+
+      res.status(444).json({ success: false, msg: 'something wrong' });
+    }
+  });
+
 //for session use
 router.get('/Session', function (req, res, next) {
   if (req.session.Auth) {

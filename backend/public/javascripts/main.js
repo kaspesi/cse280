@@ -41,7 +41,7 @@ window.onload = function () {
 
     function populate_count_table(counters){
         let counter_table = document.getElementById("counter_table");
-
+        counter_table.innerHTML = "";
         for(let i = 0; i < counters.length; i++){
             let count = counters[i];
 
@@ -94,25 +94,83 @@ window.onload = function () {
             del_col.className = "count_cell_del";
             del_col.appendChild(del_button);
             table_row.appendChild(del_col);
+            del_button.addEventListener("click", function(e){
+                console.log(this.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.getAttribute("index"));
+                let index = this.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.getAttribute("index")
+                delete_counter(index);
+            })
 
         }
     }
 
+    function delete_counter(index){
+        return fetch('/Counters', {
+            headers: { 'Content-Type': 'application/json' },
+            method: 'delete',
+            body: JSON.stringify({i: index})
+        }).then(function(response)  {
+            return response.json();
+        }).then(function(response){
+            let countArray = response.countArray;
+            console.log(response.countArray);
+            populate_count_table(countArray);
+
+        })
+    }
+
     function inc_counter(index, value) {
-        return fetch('Counters', {
+        return fetch('/Counters', {
             headers: { 'Content-Type': 'application/json' },
             method: 'get',
             query: index
         })
-            .then(function(response)  {
+        .then(function(response)  {
+            return response.json();
+        }).then(function(response){
+                console.log(response.body)
+        })
 
+    }
+
+    function add_counter(value) {
+        let count_array;
+        return fetch('/Counters', {
+            headers: { 'Content-Type': 'application/json' },
+            method: 'get',
+        })
+            .then(function(response)  {
                 return response.json();
             }).then(function(response){
                 console.log(response.body)
-
+                count_array = response.body;
+                count_array.push(parseInt(value, 10));
+                return fetch('Counters', {
+                    headers: { 'Content-Type': 'application/json' },
+                    method: 'put',
+                    body: JSON.stringify(count_array)
+                }).then(function(response) {
+                    return response.json();
+                }).then(function(response){
+                    console.log("In counter add response");
+                    console.log(response.countArray);
+                    populate_count_table(response.countArray);
+                })
             })
 
     }
+
+    document.getElementById('add_counter')
+        .addEventListener("click", function (e) {
+            console.log("Attempting to add a counter");
+            let counter_value = this.previousElementSibling.value;
+            if(counter_value != "" && counter_value != undefined){
+                add_counter(counter_value);
+            }else {
+                window.alert("Error:  Enter counter value");
+            }
+
+        })
+    
 
     get_session()
     .then(function (res) {
@@ -128,60 +186,7 @@ window.onload = function () {
         }
     })
 
-    function add_win(userName) {
-        let payload = {
-            Username: userName
-        }
-        return fetch('/win', {
-            headers: { 'Content-Type': 'application/json' },
-            method: 'put',
-            body: JSON.stringify(payload)
-        })
-            .then(function (response) {
-                return response.json()
-            })
-            .then(data => {
-                // Work with JSON data here
-                console.log(data['Win'])
-                document.getElementById("win_score").value = data['Win']
-              })
-    }
-    function add_lose(userName) {
-        let payload = {
-            Username: userName
-        }
-        return fetch('/lose', {
-            headers: { 'Content-Type': 'application/json' },
-            method: 'put',
-            body: JSON.stringify(payload)
-        })
-            .then(function (response) {
-                return response.json()
-            })
-            .then(data => {
-                // Work with JSON data here
-               
-                document.getElementById("lose_score").value = data['lose']
-              })
-    }
-    function add_tie(userName) {
-        let payload = {
-            Username: userName
-        }
-        return fetch('/tie', {
-            headers: { 'Content-Type': 'application/json' },
-            method: 'put',
-            body: JSON.stringify(payload)
-        })
-            .then(function (response) {
-                return response.json()
-            })
-            .then(data => {
-                // Work with JSON data here
-                console.log(data['Tie'])
-                document.getElementById("tie_score").value = data['Tie']
-              })
-    }
+   
 
     function signUp(userName, password, initCounter) {
         console.log(`Passed ${initCounter} to signUp`)
@@ -332,14 +337,8 @@ window.onload = function () {
             
         })
         //win
-    document.getElementById('win_btn')
-        .addEventListener("click", function (e) {
-            console.log("add_win")
-            username = document.getElementById("sg_in_us")
-            console.log(username.value)
-            add_win(username.value)
 
-        })
+
 
 
 
@@ -358,6 +357,8 @@ window.onload = function () {
             username = document.getElementById("sg_in_us")
             add_tie(username.value)
         })
+
+        
 
 
 };

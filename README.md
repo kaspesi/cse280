@@ -1,4 +1,4 @@
-# Countr Spring Project
+# Countr Sprint Project
 
 * What was the final state of your project after one week?
     * The final state of our project after one week was a complete web application with a working pug/js frontend and express backend with a mongodb atlas database.

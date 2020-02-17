@@ -28,7 +28,6 @@ window.onload = function () {
                 return response.json()
                 .then(data => {
                     console.log(data)
-                    document.getElementById("in_game_username").innerHTML = data['Username']
                     let counters = data['countArray']
                     console.log(`in get_user with counters of type ${typeof(counters)} with value ${counters}`)
                     populate_count_table(counters)
@@ -66,16 +65,25 @@ window.onload = function () {
             let inc_col = document.createElement("td");
             let inc_button = document.createElement("button");
             inc_button.innerHTML = "+";
-            inc_col.className = "count_cell";
+            inc_col.className = "count_cell_inc";
             inc_col.appendChild(inc_button);
             table_row.appendChild(inc_col);
+
+            inc_button.addEventListener("click", function (e) {
+                console.log(this.parentNode.previousSibling.previousSibling.getAttribute("index"));
+                let value = this.parentNode.previousSibling.innerHTML;
+                let index = this.parentNode.previousSibling.previousSibling.getAttribute("index");
+                console.log(`Inc: ${index} Value: ${value}`);
+                console.log(this);
+                inc_counter(index, value);
+            })
 
 
             //DECREMENT BUTTON
             let dec_col = document.createElement("td");
             let dec_button = document.createElement("button");
             dec_button.innerHTML = "-";
-            dec_col.className = "count_cell";
+            dec_col.className = "count_cell_dec";
             dec_col.appendChild(dec_button);
             table_row.appendChild(dec_col);
 
@@ -83,11 +91,27 @@ window.onload = function () {
             let del_col = document.createElement("td");
             let del_button = document.createElement("button");
             del_button.innerHTML = "Delete";
-            del_col.className = "count_cell";
+            del_col.className = "count_cell_del";
             del_col.appendChild(del_button);
             table_row.appendChild(del_col);
 
         }
+    }
+
+    function inc_counter(index, value) {
+        return fetch('Counters', {
+            headers: { 'Content-Type': 'application/json' },
+            method: 'get',
+            query: index
+        })
+            .then(function(response)  {
+
+                return response.json();
+            }).then(function(response){
+                console.log(response.body)
+
+            })
+
     }
 
     get_session()
@@ -316,6 +340,10 @@ window.onload = function () {
             add_win(username.value)
 
         })
+
+
+
+
 //lose
     document.getElementById("lose_btn")
         .addEventListener("click", function (e) {

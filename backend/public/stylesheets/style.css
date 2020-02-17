@@ -193,17 +193,7 @@ font-family: 'Ubuntu', sans-serif;
       }
     
 
-      .add_counter_button {
-        background-color: rgb(255, 255, 255); /* Green */
-        border-radius: 1em;
-        position:relative;
-        margin-left: 43%;
-        border-color:rgb(0, 153, 204);
-        font-size: 15px;
-        padding: 7px;
-        color: rgb(0, 153, 204);
-      }
-
+  
 
       #counter_table {
         margin-top: 3%;
@@ -221,3 +211,37 @@ font-family: 'Ubuntu', sans-serif;
       .count_buttons{
         
       }
+
+      .counter_input {
+        color: rgb(0, 153, 204);
+        font-size: 15px;
+        letter-spacing: 1px;
+        background-color: rgb(255, 255, 255); /* Green */
+        border-radius: 1em;
+        border:1px solid rgb(0, 153, 204);
+        box-sizing: border-box;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        margin-left: 20px;
+        width: 25%;
+        height: 2.5em;
+        position: relative;
+        border-style:solid;
+        padding-left:10px;
+        }
+
+        .add_counter_button {
+          background-color: rgb(255, 255, 255); /* Green */
+          border-radius: 1em;
+          position:relative;
+          margin-left: 24%;
+          border-color:rgb(0, 153, 204);
+          font-size: 15px;
+          padding: 7px;
+          color: rgb(0, 153, 204);
+          float: left;
+          width: 25%;
+          height: 2.5em;
+
+        }
+  

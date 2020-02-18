@@ -16,7 +16,7 @@ router.get('/Share/', function (req, res, next) {
     res.send(new Buffer(`<link rel="stylesheet" href="../stylesheets/style.css">
     <div class="main" id = "counter_share_table">
     <h2 class="sign" align="center" >Welcome to Countr Sharing</h2>
-    <p class="sign_in" align="center" id = "text_header">Current Counter Value: </p>
+    <p class="sign_in" align="center" id = "text_header">Counter Value: </p>
     <p class="sign_in" align="center" id = "text_value">${counter.Value} </p>
     <form class="form1" onSubmit="return false;">
    

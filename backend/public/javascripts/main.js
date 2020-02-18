@@ -117,6 +117,17 @@ window.onload = function () {
                 share_counter(value);
             })
 
+            //SHARE BUTTON
+            // let link_col = document.createElement("td");
+            // let link_button = document.createElement("p");
+            // //link_button.innerHTML;
+            // link_col.className = "count_cell_share";
+            // link_col.appendChild(link_button);
+            // table_row.appendChild(link_col);
+            // link_button.addEventListener("click", function(e){
+            //     //Add code to copy to clipboard
+            // })
+
         }
     }
 
@@ -128,7 +139,9 @@ window.onload = function () {
         }).then(function(response){
             return response.json();
         }).then(function(response){
-            console.log(response._id);
+            console.log(response)
+            alert(`http://localhost:3000/Share/?id=${response._id}`)
+
         })
     }
 

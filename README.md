@@ -29,10 +29,12 @@
 * #### What challenges did you face in working on this project that prevented progress?
   * Had issues setting up the Mongodb database at first
   * Also had issues since with pug we used css body hidden/block rather than different html pages.  So while we had all the routes needed by the backend we only used one html page which was dynamically updated with javascript.
+  * Learning curve for some of us with specific front-end frameworks and MongoDB.
   
 * #### What would you do differently for the rest of your capstone work?
   * Planning ahead
-  
+  * Dividing up work ahead of time
+  * Iron out platform dependent issues earlier.
   
   
   ### How to query counter

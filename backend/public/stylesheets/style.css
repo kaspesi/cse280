@@ -247,3 +247,71 @@ font-family: 'Ubuntu', sans-serif;
         #text_value{
           color:black;
         }
+
+
+        .count_cell_inc button{
+          background-color: rgb(255, 255, 255); /* Green */
+          border-radius: 1em;
+          position:relative;
+          margin-left: 24%;
+          border-color:rgb(0, 153, 204);
+          font-size: 15px;
+          padding: 7px;
+          color: rgb(0, 153, 204);
+          float: left;
+          width: 50px;
+          font-family: 'Ubuntu', sans-serif;
+
+          height: 2.5em;
+          margin-left: 20px;
+        }
+
+        .count_cell_dec button{
+          background-color: rgb(255, 255, 255); /* Green */
+          border-radius: 1em;
+          position:relative;
+          margin-left: 24%;
+          border-color:rgb(0, 153, 204);
+          font-size: 15px;
+          padding: 7px;
+          font-family: 'Ubuntu', sans-serif;
+
+          color: rgb(0, 153, 204);
+          float: left;
+          width: 50px;
+          height: 2.5em;
+          margin-left: 20px;
+        }
+        
+
+        .count_cell_del button{
+          background-color: rgb(255, 255, 255); /* Green */
+          border-radius: 1em;
+          position:relative;
+          margin-left: 24%;
+          border-color:rgb(0, 153, 204);
+          font-size: 15px;
+          padding: 7px;
+          font-family: 'Ubuntu', sans-serif;
+
+          color: rgb(0, 153, 204);
+          float: left;
+          width: 70px;
+          height: 2.5em;
+          margin-left: 20px;
+        }
+
+        .count_cell_share button{
+          background-color: rgb(255, 255, 255); /* Green */
+          border-radius: 1em;
+          position:relative;
+          margin-left: 24%;
+          border-color:rgb(0, 153, 204);
+          font-size: 15px;
+          padding: 7px;
+          color: rgb(0, 153, 204);
+          float: left;
+          width: 70px;
+          height: 2.5em;
+          margin-left: 20px;
+        }

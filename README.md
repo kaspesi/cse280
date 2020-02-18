@@ -1,8 +1,8 @@
 # Countr Sprint Project
 
-* What was the final state of your project after one week?
+* #### What was the final state of your project after one week?
     * The final state of our project after one week was a complete web application with a working pug/js frontend and express backend with a mongodb atlas database.
-* How was the project divided? Who did what?
+* #### How was the project divided? Who did what?
   * Kevin
     * Set up MongoDB Atlas Database
     * Created front-end with Javascript, PUG, and CSS
@@ -26,11 +26,11 @@
      * Counter creation
 
   
-* What challenges did you face in working on this project that prevented progress?
+* #### What challenges did you face in working on this project that prevented progress?
   * Had issues setting up the Mongodb database at first
   * Also had issues since with pug we used css body hidden/block rather than different html pages.  So while we had all the routes needed by the backend we only used one html page which was dynamically updated with javascript.
   
-* What would you do differently for the rest of your capstone work?
+* #### What would you do differently for the rest of your capstone work?
   * Planning ahead
   
   

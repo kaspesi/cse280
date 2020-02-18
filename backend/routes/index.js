@@ -13,7 +13,7 @@ router.get('/Share/', function (req, res, next) {
   if(counter != null){
     console.log(counter.Value);
     res.set('Content-Type', 'text/html');
-    res.send(new Buffer(`   <link rel="stylesheet" href="../stylesheets/style.css">
+    res.send(new Buffer(`<link rel="stylesheet" href="../stylesheets/style.css">
     <div class="main" id = "counter_share_table">
     <h2 class="sign" align="center" >Welcome to Countr Sharing</h2>
     <p class="sign_in" align="center" id = "text_header">Current Counter Value: </p>

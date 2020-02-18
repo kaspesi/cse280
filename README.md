@@ -23,3 +23,8 @@
   
 * What would you do differently for the rest of your capstone work?
   * Planning ahead
+  
+  
+  
+  How to query counter
+  http://localhost:3000/Share/?id=5e4b4e64dcc6b4588185d744

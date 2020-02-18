@@ -37,3 +37,8 @@
   
   How to query counter
   http://localhost:3000/Share/?id=5e4b4e64dcc6b4588185d744
+  
+  Authenticate to MongoDB database:
+  * echo "MONGODB_URI="mongodb+srv://<Username>:<Password>@cluster0-i1h3w.mongodb.net/test?retryWrites=true&w=majority"" > .env
+   * Do not include '<' '>'
+  

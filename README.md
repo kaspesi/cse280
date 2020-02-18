@@ -11,15 +11,19 @@
   * Shane
     * Set up link database
     * Set up log-in authentication
+    * Created data base schema for storing share counter link and value 
   * Emir
     * Set up link generation
     * Set up sign-up div
+    * Created on load script to display counter for share page
   * Hayden
      * Set up methods to populate counter table
      * Set up sharing html and styling
+     * Counter removal
   * Tyler 
      * Share button event and function call
      * Set up methods in front-end and router to add/delete/increment/decrement counters
+     * Counter creation
 
   
 * What challenges did you face in working on this project that prevented progress?

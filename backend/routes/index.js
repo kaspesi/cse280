@@ -1,10 +1,43 @@
 const express = require('express');
 const router = express();
 const User = require('../models/User');
+const Counter = require('../models/Counter')
 
 //444 code for no access 
 //445 code for name duplicate
 /* GET home page. */
+
+router.get('/Share/', function (req, res, next) {
+  console.log(req.query.id)
+  Counter.findOne({ _id: req.query.id }, function (err, counter) {
+  if(counter != null){
+    console.log(counter.Value);
+    res.set('Content-Type', 'text/html');
+    res.send(new Buffer(`   <link rel="stylesheet" href="../stylesheets/style.css">
+    <div class="main" id = "counter_share_table">
+    <h2 class="sign" align="center" >Welcome to Countr Sharing</h2>
+    <p class="sign_in" align="center" id = "text_header">Current Counter Value: </p>
+    <p class="sign_in" align="center" id = "text_value">${counter.Value} </p>
+    <form class="form1" onSubmit="return false;">
+   
+  </div>`));
+  }
+  });
+});
+
+
+router.post('/Share', function (req, res, next) {  
+  console.log("In /Share POST");
+  let counter = new Counter();
+  counter.set({ Value: req.body.val });
+  counter.save();
+  res.send(counter)
+
+});
+
+
+
+
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Front Page' });
 });

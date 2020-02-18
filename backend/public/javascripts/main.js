@@ -112,12 +112,24 @@ window.onload = function () {
             share_col.appendChild(share_button);
             table_row.appendChild(share_col);
             share_button.addEventListener("click", function(e){
-                console.log(this.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.getAttribute("index"));
-                let index = this.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.getAttribute("index")
-                //delete_counter(index);
+                console.log(this.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.innerHTML);
+                let value = this.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.innerHTML;
+                share_counter(value);
             })
 
         }
+    }
+
+    function share_counter(value){
+        return fetch('/Share', {            
+            headers: { 'Content-Type': 'application/json' },
+            method: 'post',
+            body: JSON.stringify({val: value})
+        }).then(function(response){
+            return response.json();
+        }).then(function(response){
+            console.log(response._id);
+        })
     }
 
     function delete_counter(index){
@@ -395,5 +407,16 @@ window.onload = function () {
         })
             
         })
+
+    //after clicking log_out, delele session
+    document.getElementById("counter_share_table")
+    .addEventListener("click", function (e) {
+        log_off().then(function(res){
+            table_3.style.display = "none"
+            table_1.style.display = "block"
+            table_4.style.display = "none"
+    })
+        
+    })
 
 };

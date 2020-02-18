@@ -8,14 +8,19 @@
     * Created front-end with Javascript, PUG, and CSS
     * Created backend routes using Express framework with Node js
     * Used BCrypt to hash+salt passwords prior to storing them in database
-    * Set up log-in authentication
-    * Set up sign-up div
-    * Set up methods to populate counter table
-    * Set up methods in front-end and router to add/delete/increment/decrement counters
   * Shane
+   * Set up link database
+    * Set up log-in authentication
   * Emir
+   * Set up link generation
+    * Set up sign-up div
   * Hayden
+   * Set up methods to populate counter table
+   * Set up sharing html and styling
   * Tyler 
+   * Share button event and function call
+   * Set up methods in front-end and router to add/delete/increment/decrement counters
+
   
 * What challenges did you face in working on this project that prevented progress?
   * Had issues setting up the Mongodb database at first

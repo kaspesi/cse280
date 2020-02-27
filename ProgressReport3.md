@@ -1,4 +1,4 @@
-# Progress Report 2
+# Progress Report 3
 ## Summary of Work Completed
 Since our last meeting we finalized that we wanted our project to be AI for social good with Professor Lopresi.  This week we created our project proposal and emailed our potential project advisor.  In this email we listed our cummulative group experiance with the required skills for the project and are waiting back for his response. 
 

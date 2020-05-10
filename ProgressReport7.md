@@ -22,8 +22,7 @@ Decide on functionality of the project.
 ### Tyler Dressman
 - Met with Professor Lopresti for an hour
 - Discussed a new contact that could be useful
-- Brainstormed directions we could take the project in
-
+- Brainstormed directions we could take the project in 
 
 ### Emir Anda
 - Met with Professor Lopresti for an hour

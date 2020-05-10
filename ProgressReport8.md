@@ -1,4 +1,4 @@
-# Progress Report 7
+# Progress Report 8
 ## Summary of Work Completed
 Sat down with Professor Phillips and went over diagrams understanding the frameworks our project could use.
 
